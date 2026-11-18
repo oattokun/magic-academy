@@ -159,3 +159,32 @@ input[type="range"] { display: block; width: 100%; height: 5px; margin: 12px 0 5
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
 
+.house-card h3 small { color: #988e98; font-size: .53em; font-weight: 500; }
+.transfiguration-section { padding-top: 82px; padding-bottom: 96px; }
+.transfiguration-intro { display: flex; align-items: flex-start; gap: 10px; margin: -3px 0 18px; padding: 15px 18px; border: 1px solid #f0dce5; border-radius: 14px; background: #fff8fb; }
+.transfiguration-intro b { flex: 0 0 190px; color: #765469; font-size: 11px; }
+.transfiguration-intro span { color: #887e88; font-size: 10px; line-height: 1.8; }
+.year-details { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.year-details details { overflow: hidden; border: 1px solid #f0e6ec; border-radius: 13px; background: #fff; }
+.year-details summary { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 4px 10px; min-height: 66px; padding: 12px 15px; cursor: pointer; list-style: none; }
+.year-details summary::-webkit-details-marker { display: none; }
+.year-details summary::after { grid-column: 1; grid-row: 2; color: #ca7d9d; content: "＋ ดูรายละเอียด"; font-size: 8px; }
+.year-details details[open] summary::after { content: "− ซ่อนรายละเอียด"; }
+.year-details summary > span { grid-column: 1; grid-row: 1; color: #b67a96; font-family: var(--serif); font-size: 9px; letter-spacing: .08em; }
+.year-details summary > b { grid-column: 2; grid-row: 1; color: #514751; font-size: 11px; font-weight: 600; }
+.year-details summary > i { grid-column: 2; grid-row: 2; color: #968c96; font-size: 9px; font-style: normal; }
+.year-details details > p { margin: 0; padding: 0 15px 14px 95px; color: #807780; font-size: 10px; line-height: 1.8; }
+.minigame-note { display: flex; align-items: flex-start; gap: 6px; margin: 16px 0 0; padding: 14px 16px; border-radius: 12px; color: #887c87; background: #f8f5fb; font-size: 10px; line-height: 1.8; }
+.minigame-note > span { color: #b18ac4; }.minigame-note b { flex: 0 0 auto; color: #6b5676; }
+@media (max-width: 620px) {
+  .transfiguration-section { padding-top: 66px; padding-bottom: 75px; }
+  .transfiguration-intro { flex-direction: column; gap: 4px; padding: 13px 14px; }
+  .transfiguration-intro b { flex: auto; }
+  .year-details { grid-template-columns: 1fr; }
+  .year-details summary { grid-template-columns: 59px 1fr; gap: 4px 8px; padding-inline: 12px; }
+  .year-details summary > b { font-size: 10px; }
+  .year-details summary > i { font-size: 8px; }
+  .year-details details > p { padding-left: 79px; padding-right: 12px; }
+  .minigame-note { flex-wrap: wrap; padding: 12px; font-size: 9px; }
+}
+
