@@ -18,36 +18,25 @@ siteNav?.querySelectorAll("a").forEach((link) => {
 });
 
 const totalInput = document.querySelector("#total-credit");
-const coreInput = document.querySelector("#core-credit");
 const totalOutput = document.querySelector("#total-value");
-const coreOutput = document.querySelector("#core-value");
 const result = document.querySelector("#credit-result");
+const passingCredits = 68;
 
 function updateCreditResult() {
+  if (!totalInput || !totalOutput || !result) return;
   const total = Number(totalInput.value);
-  const core = Number(coreInput.value);
   totalOutput.value = total;
   totalOutput.textContent = total;
-  coreOutput.value = core;
-  coreOutput.textContent = core;
 
-  const passed = total >= 576 && core >= 60;
+  const passed = total >= passingCredits;
   result.classList.toggle("is-short", !passed);
   result.querySelector(".result-icon").textContent = passed ? "✓" : "↗";
-  result.querySelector("b").textContent = passed ? "ผ่านเกณฑ์ตัวอย่าง" : "ยังต้องเก็บคะแนนเพิ่ม";
-
-  if (total < 576 && core < 60) {
-    result.querySelector("small").textContent = "คะแนนรวมและวิชาหลักยังไม่ถึงเกณฑ์";
-  } else if (total < 576) {
-    result.querySelector("small").textContent = `ต้องการอีก ${576 - total} หน่วยกิตเพื่อให้ถึงคะแนนรวมขั้นต่ำ`;
-  } else if (core < 60) {
-    result.querySelector("small").textContent = `มีวิชาหลักที่ต้องเพิ่มอีก ${60 - core} หน่วยกิต`;
-  } else {
-    result.querySelector("small").textContent = "พร้อมก้าวสู่ชั้นปีถัดไป";
-  }
+  result.querySelector("b").textContent = passed ? "ผ่านเกณฑ์ตัวอย่าง" : "ยังต้องเก็บหน่วยกิตเพิ่ม";
+  result.querySelector("small").textContent = passed
+    ? "พร้อมก้าวสู่ชั้นปีถัดไป"
+    : `ต้องการอีก ${passingCredits - total} หน่วยกิตเพื่อให้ถึงเกณฑ์เลื่อนชั้น`;
 }
 
 totalInput?.addEventListener("input", updateCreditResult);
-coreInput?.addEventListener("input", updateCreditResult);
 updateCreditResult();
 
