@@ -260,3 +260,12 @@ input[type="range"] { display: block; width: 100%; height: 5px; margin: 12px 0 5
 }
 @media (max-width: 420px) { .charms-spell-list li { grid-template-columns: 1fr; gap: 3px; }.charms-wheel-tags { gap: 4px; }.charms-wheel-tags span, .charms-wheel-tags b { padding: 6px 7px; font-size: 9.8px; } }
 
+/* Magical creature roster, placed between the core curriculum and electives. */
+.curriculum-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+.creature-roster { padding: 29px; border: 1px solid #f0e1e8; border-radius: 22px; background: linear-gradient(145deg, #fff8fb 0, #fff 62%, #fbf9ff 100%); }
+.creature-roster-heading { max-width: 700px; margin-bottom: 25px; }.creature-roster-heading .eyebrow { margin-bottom: 8px; }.creature-roster-heading h2 { margin: 0 0 8px; font-size: clamp(25px, 3vw, 34px); font-weight: 600; letter-spacing: -.03em; }.creature-roster-heading > p:last-child { margin: 0; color: #8b818b; font-size: 15px; line-height: 1.8; }
+.creature-group-title { margin: 22px 0 10px; color: #6a5b69; font-size: 15px; font-weight: 600; }.creature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.creature-card { min-height: 146px; padding: 16px 17px; border: 1px solid #f0e7ec; border-radius: 15px; background: #fff; }.creature-type { color: #bc7593; font-size: 11px; font-weight: 600; letter-spacing: .04em; }.creature-card h4 { margin: 7px 0 6px; color: #504552; font-size: 16px; font-weight: 600; }.creature-card h4 small { color: #988d99; font-size: 12px; font-weight: 500; }.creature-card p { margin: 0; color: #817783; font-size: 13px; line-height: 1.75; }
+.creature-roster-note { display: flex; gap: 9px; margin: 18px 0 0; padding: 12px 14px; border-radius: 12px; color: #837885; background: #fff; font-size: 12.6px; line-height: 1.75; }.creature-roster-note span { color: #cf82a1; }.electives-card { width: min(100%, 850px); margin: 0 auto; }
+@media (max-width: 850px) { .creature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .creature-roster { padding: 20px; }.creature-grid { grid-template-columns: 1fr; gap: 9px; }.creature-card { min-height: 0; padding: 15px; } }
