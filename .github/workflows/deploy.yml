@@ -29,7 +29,7 @@ jobs:
       - name: Stage public site files
         run: |
           mkdir -p _site/subjects
-          cp index.html styles.css script.js .nojekyll _site/
+          cp index.html creatures.html styles.css script.js .nojekyll _site/
           cp subjects/*.html _site/subjects/
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
