@@ -39,7 +39,7 @@ button, input { font: inherit; }
 .menu-toggle { display: none; border: 0; background: none; color: var(--pink-deep); font-size: 24px; cursor: pointer; }
 
 .hero { position: relative; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; min-height: 590px; padding-top: 57px; padding-bottom: 86px; }
-.hero::before { position: absolute; z-index: -1; top: 0; right: calc((100% - 100vw) / 2); bottom: 65px; left: 35%; border-radius: 0 0 0 120px; background: radial-gradient(ellipse at 77% 28%, #fce4ee 0, #fff4f8 36%, #fff 78%); content: ""; }
+.hero::before { position: absolute; z-index: -1; top: 0; right: 0; bottom: 65px; left: 35%; border-radius: 0 0 0 120px; background: radial-gradient(ellipse at 77% 28%, #fce4ee 0, #fff4f8 36%, #fff 78%); content: ""; }
 .hero-copy { position: relative; z-index: 1; padding: 18px 0 0 8px; }
 .eyebrow { margin: 0 0 16px; color: #bb6990; font-size: 10px; font-weight: 700; letter-spacing: .2em; }
 .eyebrow-dot { display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: #e899b8; box-shadow: 0 0 0 4px #fae2ec; vertical-align: 1px; }
